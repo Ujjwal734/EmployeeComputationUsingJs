@@ -82,7 +82,23 @@ console.log("The net income of the employee is :"+total_Employs_Wage);
  }
 console.log("Monthly Wage of the Employee is :"+EmployWage + " Total working hour of the Employee is :"+total_Hrs);
 
-
+//UC6 Storing Wage in an Array
+function DailyWage(emphr)
+{
+    return emphr * Wage_Per_Hour
+}
+const Max_Hrs = 160;
+const Working_Days = 20;
+let empDailyWageArr = new Array();
+while (total_Hrs <= Max_Hrs && totalWorkingDays < Working_Days )
+{
+    totalWorkingDays++;
+    let emphr = getWorkingHrs(employCheck);
+    total_Hrs += emphr;
+    empDailyWageArr.push(DailyWage(emphr));
+}
+let EmployWages = DailyWage(total_Hrs);
+console.log("Total Days:- "+totalWorkingDays+"Total Hrs :- "+total_Hrs+"Emp Wage :- "+EmployWages)
 
 
 

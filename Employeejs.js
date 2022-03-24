@@ -20,7 +20,7 @@ const Full_Time_Hours =8;
 const Wage_Per_Hour = 20;
 {
     let employeHrs = 0;
-    let employCheck = Math.floor(Math.random()*10)% 3;
+    let employCheck = Math.floor(Math.random()*10) % 3;
     switch (employCheck)
     {
         case Is_Part_Time:
@@ -39,27 +39,32 @@ const Wage_Per_Hour = 20;
     console.log("Employee Wage :- " + employeeWage);
 }
 //UC3_Using Function
-const Is_Part_Times =1;
-const Is_Full_Times =2;
-const Part_Time_Hour =4;
-const Full_Time_Hour =8;
-const Wage_Per_Hours = 20;
 let emphr = 0;
 function getWorkingHrs(employCheck)
 {
     switch (employCheck)
     {
-        case Is_Part_Times:
+        case Is_Part_Time:
             console.log("Employee is For Part Time :- ")
-            return Part_Time_Hour;
-        case Is_Full_Times:
+            return Part_Time_Hours;
+        case Is_Full_Time:
             console.log("Employee is For Full Time")
-            return Full_Time_Hour;
+            return Full_Time_Hours;
         default:
             console.log("Employee is Absent :-");
             return 0; 
     }
 }
 emphr += getWorkingHrs(employCheck);
-let empWage = emphr * Wage_Per_Hours;
+let empWage = emphr * Wage_Per_Hour;
 console.log("Employee Wage :- " + empWage);
+
+//UC4 calculating Monthly Wage
+let total_Employs_Wage=0;
+const totalWorkingDays = 20;
+emphr += getWorkingHrs(employCheck);
+for(let i =0 ;i <= 20; i++)
+{
+   total_Employs_Wage += totalWorkingDays * getWorkingHrs(employCheck);
+}
+console.log("The net income of the employee is :"+total_Employs_Wage);

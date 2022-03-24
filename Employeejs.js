@@ -68,3 +68,25 @@ for(let i =0 ;i <= 20; i++)
    total_Employs_Wage += totalWorkingDays * getWorkingHrs(employCheck);
 }
 console.log("The net income of the employee is :"+total_Employs_Wage);
+
+ //UC5 Calculating Wage in hour
+ let EmployWage=0;
+ let total_Hrs=0;
+ for(let i=0;i<20;i++){
+ let working_Hrs = getWorkingHrs(employCheck);
+ if(total_Hrs + working_Hrs <= 160)
+ {
+    EmployWage += Wage_Per_Hour* working_Hrs;
+    total_Hrs += working_Hrs;
+ }
+ }
+console.log("Monthly Wage of the Employee is :"+EmployWage + " Total working hour of the Employee is :"+total_Hrs);
+
+
+
+
+
+
+
+
+
